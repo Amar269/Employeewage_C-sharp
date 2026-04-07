@@ -19,7 +19,7 @@ class EmployeeWage
         return (empCheck == 1) ? 8 : (empCheck == 2 ? 4 : 0);
     }
 
-    public void ComputeWageWithLimit()
+    public void ComputeWage()
     {
         int totalHours = 0;
         int totalDays = 0;
@@ -30,9 +30,7 @@ class EmployeeWage
             totalHours += GetDailyHours();
         }
 
-        int totalSalary = totalHours * wagePerHour;
-
-        Console.WriteLine("Total Wage: " + totalSalary);
+        Console.WriteLine(companyName + " Wage: " + totalHours * wagePerHour);
     }
 }
 
@@ -40,7 +38,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        EmployeeWage emp = new EmployeeWage("TCS" , 20);
-        emp.ComputeWageWithLimit();
+        EmployeeWage emp1 = new EmployeeWage("TCS", 20);
+        EmployeeWage emp2 = new EmployeeWage("Infosys", 25);
+
+        emp1.ComputeWage();
+        emp2.ComputeWage();
     }
 }
