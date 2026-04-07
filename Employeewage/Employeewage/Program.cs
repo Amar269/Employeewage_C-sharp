@@ -40,7 +40,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        EmployeeWage emp = new EmployeeWage("TCS", 20);
+        EmployeeWage emp = new EmployeeWage("TCS" , 20);
         emp.ComputeWageWithLimit();
     }
 }
